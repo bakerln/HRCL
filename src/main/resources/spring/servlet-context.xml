@@ -10,6 +10,8 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:/conf/application.properties" />
     <!--解决添加mvc:resources添加后无法访问Controller-->
     <mvc:annotation-driven>
         <!--<mvc:message-converters register-defaults="true">-->
@@ -31,7 +33,18 @@
     <!--本项目把静态资源放在了WEB-INF的statics目录下，资源映射如下-->
     <!--但是项目部署到linux下发现WEB-INF的静态资源会出现无法解析的情况，但是本地tomcat访问正常，因此建议还是直接把静态资源放在webapp的statics下，映射配置如下-->
     <mvc:resources mapping="/assets/**" location="/assets/"/>
-
+    <bean id="viewResolver" abstract="true">
+        <!--<property name="attributes">-->
+            <!--<props>-->
+                <!--&lt;!&ndash;<prop key="versionNo">${versionNo}</prop>&ndash;&gt;-->
+                <!--&lt;!&ndash;<prop key="jsPath">${jsPath}</prop>&ndash;&gt;-->
+                <!--&lt;!&ndash;<prop key="commonJsPath">${commonJsPath}</prop>&ndash;&gt;-->
+                <!--&lt;!&ndash;<prop key="minJs">${minJs}</prop>&ndash;&gt;-->
+                <!--&lt;!&ndash;<prop key="staticServer">${staticServer}</prop>&ndash;&gt;-->
+                <!--<prop key="dynamicServer">${dynamicServer}</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    </bean>
     <!-- 配置注解驱动 可以将request参数与绑定到controller参数上 -->
     <!--<mvc:annotation-driven>-->
         <!--&lt;!&ndash;<mvc:message-converters register-defaults="true">&ndash;&gt;-->
@@ -49,6 +62,12 @@
         <!--网页必须在WEB-INF下，不能直接访问jsp，必须通过Controller访问-->
         <property name="prefix" value="/WEB-INF/views/"/><!--设置JSP文件的目录位置-->
         <property name="suffix" value=".jsp"/>
+        <property name="attributes">
+            <props>
+                <prop key="dynamicServer">${dynamicServer}</prop>
+                <prop key="test">111</prop>
+            </props>
+        </property>
     </bean>
 
 </beans>

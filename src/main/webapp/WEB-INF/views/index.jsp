@@ -2,7 +2,8 @@
 <%
 //    String baseURL = "http://39.106.137.214:8080/HRCL";
     String baseURL = "http://47.93.32.138:8080/HRCL";
-    String resourceURL = "http://localhost:8080/HRCL";
+//    String resourceURL = "http://localhost:8080/HRCL";
+
 %>
 <html>
 <head>
@@ -10,7 +11,7 @@
     <meta name="generator" content="2015.0.0.309"/>
     <title>博研正通</title>
     <!-- Common CSS -->
-    <link rel="stylesheet" type="text/css" href="<%=baseURL%>/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${dynamicServer}/assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="<%=baseURL%>/assets/css/style.css"/>
     <!-- Common scripts -->
     <script src="<%=baseURL%>/assets/js/jquery-1.10.1.min.js"></script>
