@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hrcl</groupId>
-    <artifactId>hrcl</artifactId>
+    <artifactId>HRCL</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
