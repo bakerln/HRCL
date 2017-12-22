@@ -20,7 +20,7 @@ public class ContactRepository {
     //新建
     public int add(Contact contact) {
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
-        String sql = "insert into t_leaving_message (operation_name,operation_del,leaving_message,user_id,user_ip) values (:operation_name,:operation_del,:leaving_message,:user_id,:user_ip)";
+        String sql = "insert into t_leaving_message (operation_name,operation_del,leaving_message,user_id,user_ip,create_time) values (:operation_name,:operation_del,:leaving_message,:user_id,:user_ip,sysdate())";
         SqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(contact);
         return namedParameterJdbcTemplate.update(sql, sqlParameterSource);
     }
