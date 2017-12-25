@@ -32,7 +32,7 @@ public class ContactController {
     @RequestMapping(value = "/add")
     public ModelAndView add(HttpServletRequest request, HttpServletResponse response, Contact contact){
         ModelAndView mv = new ModelAndView();
-//        contact.setUser_ip(request.getRemoteAddr());
+        contact.setUser_ip(request.getRemoteAddr());
         int flag = contactService.add(contact);
         if(flag == 1){
             mv.setViewName("success");

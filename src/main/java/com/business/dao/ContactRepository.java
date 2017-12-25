@@ -19,10 +19,9 @@ public class ContactRepository {
     private JdbcTemplate jdbcTemplate;
 
     public int add(Contact contact) {
-//        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
-//        String sql = "insert into t_leaving_message (operation_name,operation_del,leaving_message,user_id,user_ip,create_time) values (:operation_name,:operation_del,:leaving_message,:user_id,:user_ip,sysdate())";
-//        SqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(contact);
-//        return namedParameterJdbcTemplate.update(sql, sqlParameterSource);
-        throw new RuntimeException();
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
+        String sql = "insert into t_leaving_message (operation_name,operation_del,leaving_message,user_id,user_ip,create_time) values (:operation_name,:operation_del,:leaving_message,:user_id,:user_ip,sysdate())";
+        SqlParameterSource sqlParameterSource = new BeanPropertySqlParameterSource(contact);
+        return namedParameterJdbcTemplate.update(sql, sqlParameterSource);
     }
 }
