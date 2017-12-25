@@ -2,24 +2,29 @@ package com.config.aspect;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by LiNan on 2017-12-22.
  * Description: AOP切面
  */
 @Aspect
+@Component
 public class ServiceExceptionAspect {
 
     @AfterThrowing(value = "execution(* com.*.service.*.*(..))", throwing = "e")
-    public ModelAndView loggingException(JoinPoint joinPoint, Exception e){
-        ModelAndView mv = new ModelAndView();
-        Object target = joinPoint.getTarget();
-        System.out.println("liNan");
-        System.out.println(joinPoint.getSignature().getName());
-        System.out.println(e.getMessage());
-        System.out.println(target);
-        mv.setViewName("false");
-        return mv;
+    public void loggingException(JoinPoint joinPoint, Exception e){
+        // 拦截的实体类
+        Object target = joinPoint.getTarget(); // 拦截的方法名称
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println("实体类:" + target);
+        System.out.println("异常类名：" + joinPoint.getSignature().getDeclaringTypeName());
+        System.out.println("方法名:" + methodName);
+        // 得到被拦截方法参数，并打印
+        Object[] args = joinPoint.getArgs();
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("抛异常拦截： 被拦截到的方法参数：" + i + " -- " + args[i]);
+        }
+        System.out.println("异常信息: " + e.getMessage());
     }
 }
