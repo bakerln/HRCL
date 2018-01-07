@@ -12,6 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ServiceExceptionAspect {
 
+    //service异常捕获
+    //dao层不允许有错误，controller层通过全局捕获
     @AfterThrowing(value = "execution(* com.*.service.*.*(..))", throwing = "e")
     public void loggingException(JoinPoint joinPoint, Exception e){
         // 拦截的实体类

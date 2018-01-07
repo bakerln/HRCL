@@ -5,10 +5,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  * Created by LiNan on 2017-12-25.
- * Description: 系统异常处理
+ * Description: 系统全局异常处理
  */
 @org.springframework.web.bind.annotation.ControllerAdvice
-public class ControllerAdvice {
+public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
     public ModelAndView defaultErrorHandler(){
