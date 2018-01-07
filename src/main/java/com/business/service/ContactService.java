@@ -1,7 +1,7 @@
-package com.common.service;
+package com.business.service;
 
-import com.common.dao.ContactRepository;
-import com.common.model.Contact;
+import com.business.dao.ContactRepository;
+import com.business.model.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +14,7 @@ public class ContactService {
 
     @Autowired
     private ContactRepository contactRepository;
+
     public int add(Contact contact){
         return contactRepository.add(contact);
     }

@@ -1,4 +1,4 @@
-package com.common.model;
+package com.business.model;
 
 import java.security.Timestamp;
 

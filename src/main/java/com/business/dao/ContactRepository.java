@@ -1,6 +1,6 @@
-package com.common.dao;
+package com.business.dao;
 
-import com.common.model.Contact;
+import com.business.model.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
@@ -17,7 +17,7 @@ public class ContactRepository {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    //新建
+
     public int add(Contact contact) {
         NamedParameterJdbcTemplate namedParameterJdbcTemplate = new NamedParameterJdbcTemplate(jdbcTemplate);
         String sql = "insert into t_leaving_message (operation_name,operation_del,leaving_message,user_id,user_ip,create_time) values (:operation_name,:operation_del,:leaving_message,:user_id,:user_ip,sysdate())";
