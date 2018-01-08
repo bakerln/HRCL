@@ -13,17 +13,14 @@
     <properties>
         <jdk.version>1.8</jdk.version>
         <spring.version>4.3.3.RELEASE</spring.version>
-        <!-- JSTL Servlet-->
         <jstl.version>1.2</jstl.version>
         <jsp-api.version>2.0</jsp-api.version>
         <servlet-api.version>3.1.0</servlet-api.version>
-        <!--下面这两个是springAOP需要用到 -->
         <aspectjweaver.version>1.8.9</aspectjweaver.version>
         <persistence-api.version>1.0.2</persistence-api.version>
-
         <mysql.version>6.0.6</mysql.version>
         <druid.version>1.0.25</druid.version>
-
+        <jackson.version>2.5.4</jackson.version>
     </properties>
 
     <dependencies>
@@ -91,19 +88,18 @@
             <artifactId>jsp-api</artifactId>
             <version>${jsp-api.version}</version>
         </dependency>
-        <!--JDBC-->
+        <!--JDBC,Druid 链接池 Database-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
-        <!-- Druid 链接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid.version}</version>
         </dependency>
-        <!--下面两个提供对 AspectJ 的支持，是 spring-aspects 所需要依赖的 -->
+        <!--下面两个提供对 AspectJ 的支持 AOP实现 -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -114,6 +110,23 @@
             <artifactId>persistence-api</artifactId>
             <version>${persistence-api.version}</version>
         </dependency>
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
