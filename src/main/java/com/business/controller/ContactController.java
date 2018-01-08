@@ -2,6 +2,7 @@ package com.business.controller;
 
 import com.business.model.Contact;
 import com.business.service.ContactService;
+import com.common.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,7 +33,7 @@ public class ContactController {
     @RequestMapping(value = "/add")
     public ModelAndView add(HttpServletRequest request, HttpServletResponse response, Contact contact){
         ModelAndView mv = new ModelAndView();
-        contact.setUser_ip(request.getRemoteAddr());
+        contact.setUser_ip(StringUtil.getIp(request));
         int flag = contactService.add(contact);
         if(flag == 1){
             mv.setViewName("success");
