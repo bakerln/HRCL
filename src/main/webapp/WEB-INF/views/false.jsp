@@ -70,54 +70,56 @@
             <a href="#">收藏本站</a>
         </div>
     </div>
-    <div class="mynav">
-        <ul class="nav nav-tabs nav-justified">
-            <li><a href="${dynamicServer}/index.htm">首页</a></li>
-            <li class="active">
-                <a href="${dynamicServer}/pages/sort-01.html" id="sort">业务服务</a>
-                <div id="sortnav" class="mynav sort" style="width: 300px;">
-                    <ul class="nav nav-pills">
-                        <li class="active"><a href="${dynamicServer}/pages/sort-01.html">基层党建实践路径研究及创新</a></li>
-                        <li><a href="${dynamicServer}/pages/sort-02.html">党员干部及企业人才的培训教育</a></li>
-                        <li><a href="${dynamicServer}/pages/sort-03.html">PPP项目专业咨询</a></li>
-                        <li><a href="${dynamicServer}/pages/sort-04.html">党务政务精数据采集及应用平台搭建运维</a></li>
-                        <li><a href="${dynamicServer}/pages/sort-05.html">公共文化产品开发及服务</a></li>
-                        <li><a href="${dynamicServer}/pages/sort-06.html">智能交互系统及解决方案</a></li>
-                        <li><a href="${dynamicServer}/pages/sort-07.html">民生领域系列服务支撑</a></li>
-                        <li><a href="${dynamicServer}/pages/sort-08.html">新媒体信息推介服务</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="${dynamicServer}/pages/tank-02.html" id="tank">智库中心</a>
-                <!--                   <div id="tanknav" class="mynav sort">
-                                      <ul class="nav nav-pills">
-                                          <li><a href="tank-01.html">观点</a></li>
-                                          <li><a href="tank-02.html">刊物</a></li>
-                                      </ul>
-                                  </div> -->
-            </li>
-            <li>
-                <a href="${dynamicServer}/pages/about-01.html" id="about">关于我们</a>
-                <div id="aboutnav" class="mynav sort">
-                    <ul class="nav nav-pills">
-                        <li><a href="${dynamicServer}/pages/about-01.html">公司简介</a></li>
-                        <li><a href="${dynamicServer}/pages/about-02.html">专家团队</a></li>
-                        <li><a href="${dynamicServer}/pages/about-03.html">合作伙伴</a></li>
-                        <li><a href="${dynamicServer}/pages/about-04.html">新闻中心</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="${dynamicServer}/pages/contact-01.html" id="contact">联系我们</a>
-                <div id="contactnav" class="mynav sort">
-                    <ul class="nav nav-pills">
-                        <li><a href="${dynamicServer}/pages/contact-01.html">诚聘英才</a></li>
-                        <li><a href="${dynamicServer}/contactUs/index.htm">联系我们</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+    <div style="border-top: 1px solid #ddd;">
+        <div class="c900 mynav">
+            <ul class="nav nav-tabs nav-justified">
+                <li><a href="${dynamicServer}/index.htm">首页</a></li>
+                <li class="active">
+                    <a href="${dynamicServer}/pages/sort-01.html" id="sort">业务服务</a>
+                    <div id="sortnav" class="mynav sort" style="width: 300px;">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a href="${dynamicServer}/pages/sort-01.html">基层党建实践路径研究及创新</a></li>
+                            <li><a href="${dynamicServer}/pages/sort-02.html">党员干部及企业人才的培训培养</a></li>
+                            <li><a href="${dynamicServer}/pages/sort-03.html">PPP专业咨询</a></li>
+                            <li><a href="${dynamicServer}/pages/sort-04.html">党务政务精数据采集及应用平台搭建运维</a></li>
+                            <li><a href="${dynamicServer}/pages/sort-05.html">公共文化产品策划及服务</a></li>
+                            <li><a href="${dynamicServer}/pages/sort-06.html">智能交互系统及解决方案</a></li>
+                            <li><a href="${dynamicServer}/pages/sort-07.html">民生领域系列服务支撑</a></li>
+                            <li><a href="${dynamicServer}/pages/sort-08.html">新媒体信息推介服务</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="${dynamicServer}/pages/tank-02.html" id="tank">智库中心</a>
+                    <!--                   <div id="tanknav" class="mynav sort">
+                                          <ul class="nav nav-pills">
+                                              <li><a href="tank-01.html">观点</a></li>
+                                              <li><a href="tank-02.html">刊物</a></li>
+                                          </ul>
+                                      </div> -->
+                </li>
+                <li>
+                    <a href="${dynamicServer}/pages/about-01.html" id="about">关于我们</a>
+                    <div id="aboutnav" class="mynav sort">
+                        <ul class="nav nav-pills">
+                            <li><a href="${dynamicServer}/pages/about-01.html">公司简介</a></li>
+                            <li><a href="${dynamicServer}/pages/about-02.html">专家团队</a></li>
+                            <li><a href="${dynamicServer}/pages/about-03.html">合作伙伴</a></li>
+                            <li><a href="${dynamicServer}/pages/about-04.html">新闻中心</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="${dynamicServer}/pages/contact-01.html" id="contact">联系我们</a>
+                    <div id="contactnav" class="mynav sort">
+                        <ul class="nav nav-pills">
+                            <li><a href="${dynamicServer}/pages/contact-01.html">诚聘英才</a></li>
+                            <li><a href="${dynamicServer}/contactUs/index.htm">联系我们</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
 <div class="sortpg">

@@ -72,8 +72,7 @@ a{
 	border-right: none;
 }
 .mynav{
-	padding: 0 200px;
-	border-top: 1px solid #ddd;
+/*	border-top: 1px solid #ddd;*/
 }
 .mynav .nav-tabs.nav-justified>li>a{
 	border:none;
@@ -402,6 +401,11 @@ footer .bottom{
     background-color: #880f0f;
     color: #eee;
     padding: 25px;
+    margin-top: -1px;
+}
+.bannert .c900{
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .sort .arrow-down {
     margin: 0 auto;
@@ -763,9 +767,6 @@ footer .bottom{
     padding: 5px;
     margin: 10px;
 }
-.aboutpg .person:hover{
-    background-color: #ad0101;
-}
 .aboutpg .person img{
     width: 100%;
 }
@@ -776,9 +777,6 @@ footer .bottom{
 .aboutpg .person .p2{
     margin: 5px 0 0 10px;
     font-size: 12px;
-}
-.aboutpg .person:hover .p1,.aboutpg .person:hover .p2{
-    color: #fff;
 }
 
 .aboutpg .block {
