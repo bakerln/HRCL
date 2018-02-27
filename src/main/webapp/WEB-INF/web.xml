@@ -19,7 +19,7 @@
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <!-- 在web.xml中配置一个监听获取request和response-->
+    <!-- 在web.xml中配置一个监听 使得不同作用域的beans 有效果了 request作用域、session作用域、globalSession作用域-->
     <listener>
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
@@ -35,9 +35,7 @@
      IUploaddatafileManager uploadmanager = (IUploaddatafileManager)    ContextLoaderListener.getCurrentWebApplicationContext().getBean("uploadManager");
      -->
     <!--ContextLoaderListener监听器的作用就是启动Web容器时，自动装配ApplicationContext的配置信息。-->
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+
     <!--2、部署applicationContext的xml文件-->
     <!--如果在web.xml中不写任何参数配置信息，默认的路径是"/WEB-INF/applicationContext.xml，
     在WEB-INF目录下创建的xml文件的名称必须是applicationContext.xml。
@@ -46,6 +44,9 @@
     也可以这样applicationContext-*.xml采用通配符，比如这那个目录下有applicationContext-ibatis-base.xml，
     applicationContext-action.xml，applicationContext-ibatis-dao.xml等文件，都会一同被载入。
     在ContextLoaderListener中关联了ContextLoader这个类，所以整个加载配置过程由ContextLoader来完成。-->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring/applicationContext.xml</param-value>
