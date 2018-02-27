@@ -5,10 +5,7 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 
 /**
  * Created by LiNan on 2017-12-26.
@@ -75,4 +72,10 @@ public class JsonUtil {
         String json = "{\"total\":\""+ rows + "\",\"root\":" + toStr(obj) + "}";
         return json;
     }
+
+
+
+
+
+
 }
